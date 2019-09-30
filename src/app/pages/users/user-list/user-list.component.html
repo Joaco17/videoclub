@@ -1,0 +1,20 @@
+<table class="table">
+        <thead>
+          <tr id="cabecera">
+            <th scope="col">Nombre</th>
+            <th scope="col">Email</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users;">
+            <td>{{ user.nombre }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+            <button class="btn btn-danger">Españita</button> &nbsp;
+            <button class="btn btn-warning" (click)='editar(user._id)'>Editar</button> &nbsp;
+            <button class="btn btn-danger" (click)='borrar(user._id)'>Borrar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
